@@ -25,6 +25,11 @@ module.exports = function Cart(oldCart){
         }
     };
 
+    this.deleteItem = function(id){
+       var item =  Product.findOne({"_id" : ObjectId(id)});
+       Product.remove({_id: item._id});
+        
+    };
     this.removeItem = function(id){
         this.totalQty -= this.items[id].qty;
         this.totalPrice -= this.items[id].price;

@@ -37,7 +37,6 @@ passport.use('local.signup', new LocalStrategy({
         var newUser = new User();
         if(req.body.adminCode == 'secretcode123'){
             newUser.isAdmin = true;
-            newUser.role = 'ADMIN';
             console.log('newUser.isAdmin'+newUser.isAdmin);
         }
         newUser.email = email;

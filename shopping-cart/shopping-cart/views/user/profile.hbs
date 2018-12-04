@@ -1,3 +1,3 @@
-{{#if this.isAdmin}}
-<h1>You're Admin</h1>
-{{/if}}
+{{# each user}}
+<h1>{{this.email}}</h1>
+{{/each}}

@@ -3,6 +3,7 @@ var router = express.Router();
 var Cart = require('../models/cart');
 
 var Product = require('../models/product');
+
 // var csrf = require('csurf');
 // var csrfProtection = csrf();
 // router.use(csrfProtection);
@@ -51,8 +52,6 @@ router.get('/sort', function(req, res, next) {
   
 router.get('/add-to-cart/:id', function(req, res, next){
   var productId = req.params.id;
-  console.log('inside the add to cart function');
-  console.log('req.session '+req.session);
   var cart = new Cart(req.session.cart ? req.session.cart : {} );
   Product.findById(productId, function(err, product){
     if(err){
@@ -64,6 +63,7 @@ router.get('/add-to-cart/:id', function(req, res, next){
     res.redirect('/');
   });
 });
+
 
 router.get('/shopping-cart', function(req, res, next){
   if(!req.session.cart){
