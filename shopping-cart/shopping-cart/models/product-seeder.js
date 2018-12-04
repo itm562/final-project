@@ -8,9 +8,24 @@ var products =[ new Product({
     price : 20
 }),
 new Product({
-    imagePath : 'https://i5.walmartimages.com/asr/6946293b-c468-4bcd-b856-b90010a1a8e4_1.3b31f50c695cec68b0a8205d61817fce.jpeg?odnHeight=450&odnWidth=450&odnBg=FFFFFF',
-    title : 'Transformers Toys Optimus Prime Cyberverse Ultim',
-    price : 40
+    imagePath : 'https://www.nda-toys.com/images/wholesale/transformers-generations-prime-voyager-asst-wholesale-17001.jpg',
+    title : 'Transformers Toys Wholesale - NDA Toys',
+    price : 30
+}),
+new Product({
+    imagePath : 'https://i.ebayimg.com/images/g/IcUAAOSwu1VW3uwH/s-l300.jpg',
+    title : 'Transformers Toys Human Alliance Bumblebee',
+    price : 20
+}),
+new Product({
+    imagePath : 'https://ae01.alicdn.com/kf/HTB1tbKROVXXXXcoaFXXq6xXFXXXO/1Pc-Baby-Toys-Music-Cartoon-Phone-Educational-Developmental-Kids-Toy-Gift-New.jpg',
+    title : 'Baby Muscial Toy',
+    price : 50
+}),
+new Product({
+    imagePath : 'https://images-na.ssl-images-amazon.com/images/I/81d0x32IAOL._SX425_.jpg',
+    title : 'Yellow Kids Toy Doodle Car',
+    price : 50
 }),
 new Product({
     imagePath : 'https://www.nda-toys.com/images/wholesale/transformers-generations-prime-voyager-asst-wholesale-17001.jpg',
@@ -22,6 +37,17 @@ new Product({
     title : 'Transformers Toys Human Alliance Bumblebee',
     price : 20
 }),
+new Product({
+    imagePath : 'https://rukminim1.flixcart.com/image/612/612/jmi22kw0/puzzle/d/h/f/1-high-speed-stickerless-3x3-magic-rubik-cube-puzzle-game-toy-original-imaf8g4zyghejjkc.jpeg?q=70',
+    title : ' Chief High Speed Stickerless 3x3 Magic Rubik',
+    price : 15
+}),
+new Product({
+    imagePath : 'https://ae01.alicdn.com/kf/HTB1Lfw7KVXXXXX1apXXq6xXFXXX4/Mini-Caterpillar-Soft-Toy-Doll-Rattle-Kids-Baby-Playmate-Toys-Calm-Owl-Doll-Cute-peek-a.jpg',
+    title : 'Mini Caterpillar Soft Toy Doll Rattle Kids ',
+    price : 25
+}),
+
 ];
 
 var done = 0;
