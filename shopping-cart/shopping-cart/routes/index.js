@@ -49,7 +49,7 @@ router.get('/shopping-cart', function(req, res, next){
 router.get('/reduce/:id' , function(req, res, next){
   var productId = req.params.id;
   var cart = new Cart(req.session.cart ? req.session.cart : {} );
-  cart.removeItem(productId);
+  cart.reduceByOne(productId);
   req.session.cart = cart;
   res.redirect('/shopping-cart');
 });
@@ -68,6 +68,11 @@ router.get('/checkout', function(req,res, next){
   var cart = new Cart(req.session.cart);
   var errMsg = req.flash('error')[0];
   res.render('shop/checkout', {total: cart.totalPrice, errMsg: errMsg, noError: !errMsg});
+});
+
+router.get('/admin', (req, res) => {
+  //res.sendFile('admin.html', {root: __dirname + '/views'})
+  
 });
 
 router.post('/checkout', function(req, res, next){

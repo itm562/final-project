@@ -1,4 +1,4 @@
-//var stripe = Stripe('pk_test_BSa1gxev6aIOmqwYtcQECT98');
+// var stripe = Stripe('pk_test_BSa1gxev6aIOmqwYtcQECT98');
 Stripe.setPublishableKey('pk_test_BSa1gxev6aIOmqwYtcQECT98');
 var $form = $('#checkout-form');
 
