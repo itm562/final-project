@@ -1,3 +1,11 @@
+<div class="row">
+  <div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-offset-3" >
+    <div id="success" class="alert alert-succcess" {{#if noMessage}}hidden{{/if}}>
+      {{ successMsg }}
+    </div>
+
+  </div>
+</div>
 {{# each products}}
  <div class="row">
   {{# each this}}
@@ -9,7 +17,7 @@
         <div class='clearfix'>
         <div class='price'>{{ this.price}}</div>
         <div style="text-align:center">
-            <a href="/add-to-cart/{{this._id}}" class="btn btn-success" role="button">View Product</a>
+            <a href="/add-to-cart/{{this._id}}" class="btn btn-success" role="button">Add To Chart</a>
         </div>
         </div>
       </div>
