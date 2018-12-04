@@ -35,6 +35,11 @@ passport.use('local.signup', new LocalStrategy({
             return done(null, false, {message: 'Email is already in use.'});            
         }
         var newUser = new User();
+        if(req.body.adminCode == 'secretcode123'){
+            newUser.isAdmin = true;
+            newUser.role = 'ADMIN';
+            console.log('newUser.isAdmin'+newUser.isAdmin);
+        }
         newUser.email = email;
         newUser.password = newUser.encryptPassword(password);
         newUser.save(function(err, result){

@@ -97,11 +97,6 @@ router.get('/checkout', function(req,res, next){
   res.render('shop/checkout', {total: cart.totalPrice, errMsg: errMsg, noError: !errMsg});
 });
 
-router.get('/admin', (req, res) => {
-  //res.sendFile('admin.html', {root: __dirname + '/views'})
-  
-});
-
 router.post('/checkout', function(req, res, next){
   if(!req.session.cart){ 
     return res.redirect('/shopping-cart');
