@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
 var successMsg = req.flash('success')[0];
 Product.find(function(err,docs){
   var productChunk = [];
-
+  
   var chunkSize = 3;
   for(var i = 0; i < docs.length; i+= chunkSize){
     productChunk.push(docs.slice(i,i + chunkSize));
@@ -22,6 +22,33 @@ Product.find(function(err,docs){
  
 });
 
+router.get('/sort', function(req, res, next) {
+  //var successMsg = req.flash('success')[0];
+  var mysort = {price: -1};
+
+  Product.find({}, function (err, docs) {
+
+
+        if (err) {
+
+            console.log("error query");
+
+        } else {
+
+            console.log('result>>'+docs);
+
+        }
+      var productChunk = [];
+
+      var chunkSize = 3;
+      for(var i = 0; i < docs.length; i+= chunkSize){
+        productChunk.push(docs.slice(i,i + chunkSize));
+      }
+      res.render('shop/index', { title: 'Shopping Cart', products: productChunk});
+    }).sort(mysort);
+  
+  });
+  
 router.get('/add-to-cart/:id', function(req, res, next){
   var productId = req.params.id;
   console.log('inside the add to cart function');
